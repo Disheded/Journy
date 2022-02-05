@@ -1,6 +1,6 @@
 .topheader{
     z-index: 99999;
-    position: fixed;
+    position: relative;
     width: 100%;
     background: white;
     height: 140px;
@@ -19,7 +19,7 @@ body{
     bottom: auto;
 }
 
-.logo>a>img{
+.log>a>img{
     margin-top: -10px;
     padding-right: 10px;
     height: 60px;
@@ -37,5 +37,39 @@ body{
 }
 
 .banner{
-    background-color: #353535;
+    background: url(images/slider.jpg) #696969;
+    background-blend-mode: multiply, normal;
+    display: flex;
+    color: #d6d5d5;
+    align-items: center;
+    min-height: 650px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    height: 100%;
+}
+
+.banner h2{
+    font-size: 3rem;
+}
+
+.banner p{
+    font-size: 2rem;
+}
+
+.scrolldown{
+    position: absolute;
+    left: calc(50% - 52px);
+    margin-top: 15%;
+}
+
+.scrolldown img{
+    margin-bottom: 20px;
+}
+
+.scrolldown p{
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
 }
