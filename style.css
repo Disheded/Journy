@@ -97,7 +97,7 @@ body{
 }
 
 .head_white_content p{
-    padding: 20px 34% 0px;
+    padding: 20px 20% 0px;
     color: #696969;
 }
 
@@ -110,7 +110,6 @@ body{
 
 .aboutus{
     margin-bottom: 90px;
-    width: 98%;
 }
 
 .advantage{
@@ -142,7 +141,7 @@ body{
     line-height: 100%;
 }
 
-.somefutures{
+.black_block{
     background-color: #171f23;
     text-align: center;
     color: #f6f6f6;
@@ -153,15 +152,14 @@ body{
 h4{
     text-transform: uppercase;
     font-size: 36px;
-
 }
 
-.head-black-content{
+.head_black_content{
     padding-bottom: 20px;
     text-align: center;
 }
 
-.head-black-content span{
+.head_black_content span{
     display: inline-block;
     width: 80px;
     height: 1px;
@@ -172,12 +170,191 @@ h4{
 .numeral>div>span{
     font-size: 60px;
     color: #ff7062;
-}
-
-.numeral>div>p{
     padding: 20px;
 }
 
+.numeral>div>p{
+    padding-top: 20px;
+    color: #d8cdcd;
+}
+
 .numeral>div>h5{
-    font-size: 40px;
+    color: #f3e7e6;
+    font-size: 45px;
+}
+
+.audit_info{
+    padding: 20px 20% 0px; 
+}
+
+.price-content-head{
+    background: #0e1316;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 40px 0 30px;
+}
+.price-content-head h4{
+    padding-top: 6px;
+    font-size: 24px;
+}
+.price-content-head p{
+    margin-top: 25px;
+    padding: 0 25px;
+    font-size: 14px;
+}
+.price-content-body{
+    background: #1f282c;
+    padding: 45px 0 40px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.price-content-body p{
+    font-size: 15px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+.price-content-body p span{
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 2px;
+}
+.price-content-body a{
+    background: #f4511e;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 10px 30px;
+}
+.price-content{
+    margin: 5% 0;
+    width: 110%;
+}
+.price-content:hover{
+    border: 1px solid #f4511e;
+}
+.price-content:hover .price-content-body>p>span{
+    color: #f4511e;
+}
+
+.team li{
+    list-style-type: none;
+}
+
+.sinner1{
+    padding: 9% 5%;
+    text-align: center;
+    background: #ebebeb;
+    min-height: 440px;
+}
+
+.sinner2{
+    padding: 9% 5%;
+    text-align: center;
+    background: #ebebeb;
+}
+
+.sinner1 img{
+    margin: 0 auto;
+}
+
+.sinner1 a img{
+    display: inherit;
+    width: 20%;
+}
+
+.sinner1 h4{
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.team{
+    padding-bottom: 90px;
+}
+
+.team .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    left: -34%;
+}
+
+.partners{
+    background: url(images/cbanner.jpg) no-repeat center;
+    background-size: cover;
+    color: #f6f6f6;
+    padding: 30px 0;
+}
+
+.slides{
+    display: flex;
+    align-items: center;
+}
+
+.innerwidth{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.getintouch{
+    padding: 80px 0;
+}
+
+.textinput{
+    margin: 40px 0;
+}
+
+.textinput p, .teammsg p{
+    font-weight: 700;
+    color: #696969;
+    margin-bottom: 5px;
+}
+
+.textinput p span, .teammsg p span{
+    color: #f6744b;
+    margin-left: 5px;
+}
+
+.textinput input{
+    border: 0;
+    border-bottom: 1px solid #cacaca;
+    width: 90%;
+    height: 40px;
+    outline: 0;
+}
+
+.textmsg textarea{
+    border: 0;
+    border-bottom: 1px solid #cacaca;
+    width: 95%;
+    height: 80px;
+    outline: 0;
+    padding-top: 10px;
+}
+
+.getintouch form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.submit{
+    width: 205px;
+    height: 50px;
+    letter-spacing: 1px;
+    background: #f6744b;
+    border: 1px solid #f6744b;
+    color: #fff;
+    display: block;
+    margin: 50px auto 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.submit:hover{
+    color: #f6744b;
+    transition: 0.5s;
+    background: white;
+}
+
+.textinput input:focus, .textmsg textarea:focus{
+    box-shadow: 0px 1px 3px 4px rgba(246, 116, 75, 0.5);
 }
