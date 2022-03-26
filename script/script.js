@@ -25,3 +25,17 @@ $(document).ready(function(){
         defaultopen: ''
     });
 });
+
+$(function(){
+    let filterlist = {
+        init: function(){
+            $('.workportfolio').mixitup({
+                targetSelector: '.portfolio',
+                filterSelector: '.filter',
+                effects: ['fade'],
+                easing: 'snap'
+            });
+        },
+    };
+    filterlist.init();
+});
