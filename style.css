@@ -5,19 +5,18 @@
     font-style: normal;
 }
 
+h3{
+    font-size: 38px;
+    text-transform: uppercase;
+    font-family: 'bignoodletitling';
+}
+
 .topheader{
     z-index: 99999;
     position: relative;
     width: 100%;
     background: white;
     height: 140px;
-    font-family: 'bignoodletitling';
-}
-
-h3{
-    font-size: 38px;
-    text-transform: uppercase;
-    font-family: 'bignoodletitling';
 }
 
 body{
@@ -48,6 +47,11 @@ body{
     text-transform: uppercase;
     font-size: 20px;
     line-height: initial;
+    font-family: 'bignoodletitling';
+}
+
+.main-content{
+    width: 100%;
 }
 
 .banner{
@@ -60,16 +64,14 @@ body{
     width: 100%;
     background-size: cover;
     text-align: center;
-    height: 100%;
+    font-family: 'bignoodletitling';
 }
 
 .banner h2{
-    font-family: 'bignoodletitling';
     font-size: 3rem;
 }
 
 .banner p{
-    font-family: 'bignoodletitling';
     font-size: 2rem;
 }
 
@@ -90,6 +92,13 @@ body{
     font-weight: 700;
 }
 
+.head_white_content span{
+    display: inline-block;
+    width: 200px;
+    height: 2px;
+    background-color: #f88865;
+}
+
 .head_white_content{
     padding: 5%;
     text-align: center;
@@ -101,24 +110,17 @@ body{
     color: #696969;
 }
 
-.head_white_content span{
-    display: inline-block;
-    width: 150px;
-    height: 2px;
-    background-color: #f88865;
-}
-
 .aboutus{
     margin-bottom: 90px;
 }
 
 .advantage{
     text-align: center;
-    width: 90%;
+    width: 100%;
+    height: 100%;
     background: #ebebeb;
     padding: 30px;
-    margin: 5%;
-    height: 100%;
+    margin: 3%;
 }
 
 .advantage span{
@@ -184,8 +186,10 @@ h4{
 }
 
 .audit_info{
-    padding: 20px 20% 0px; 
+    margin: 20px;
+    padding: 20px 20% 0px;
 }
+
 
 .price-content-head{
     background: #0e1316;
@@ -236,21 +240,11 @@ h4{
     color: #f4511e;
 }
 
-.team li{
-    list-style-type: none;
-}
-
 .sinner1{
     padding: 9% 5%;
     text-align: center;
     background: #ebebeb;
     min-height: 440px;
-}
-
-.sinner2{
-    padding: 9% 5%;
-    text-align: center;
-    background: #ebebeb;
 }
 
 .sinner1 img{
@@ -267,6 +261,24 @@ h4{
     font-size: 20px;
 }
 
+.sinner2{
+    padding: 9% 5%;
+    background: #ebebeb;
+    min-height: 440px;
+}
+
+.sinner2 h4{
+    font-family: 'bignoodletitling';
+}
+
+.sinner2 p{
+    margin-top: 5px;
+}
+
+.sinner2 img{
+    margin: 10px auto;
+}
+
 .team{
     padding-bottom: 90px;
 }
@@ -279,7 +291,7 @@ h4{
 }
 
 .partners{
-    background: url(images/cbanner.jpg) no-repeat center;
+    background: url(images/cbanner.jpg) no-repeat center center;
     background-size: cover;
     color: #f6f6f6;
     padding: 30px 0;
@@ -358,10 +370,6 @@ h4{
     box-shadow: 0px 1px 3px 4px rgba(246, 116, 75, 0.5);
 }
 
-.map h4{
-    padding-bottom: 20px;
-}
-
 .map span{
     margin-left: 10px;
     font-weight: 700;
@@ -380,7 +388,6 @@ h4{
 }
 
 footer p{
-    /*padding: 20px;*/
     font-size: 20px;
 }
 
@@ -421,7 +428,6 @@ footer h4{
     float: left;
     overflow: hidden;
     display: none;
-    text-align: center;
 }
 
 .portfolio-wrapper{
@@ -437,7 +443,7 @@ footer h4{
 }
 
 .imgDisc2{
-    position :absolute;
+    position: absolute;
     color: #fff;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -461,4 +467,12 @@ footer h4{
 .portfolio-wrapper:hover .imgDisc2{
     visibility: visible;
     opacity: 1;
+}
+
+.topheader.is-fixed{
+    height: 80px;
+}
+
+.topheader.is-fixed a{
+    margin-top: 0px;
 }
