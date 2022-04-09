@@ -1,72 +1,74 @@
 $(document).ready(function(){
-    $(".bxslider").bxSlider({
+    $('.bxslider').bxSlider({
         pager: false,
     });
 });
 
 $(document).ready(function(){
-    $(".bxslider_team").bxSlider({
-        controls: false
+    $('.bxslider_team').bxSlider({
+        controls: false,
     });
 });
 
 $(document).ready(function(){
-    $(".flexslider").flexslider({
+    $('.flexslider').flexslider({
         animation: "slide",
         animationLoop: false,
         itemWidth: 200,
         itemMargin: 25,
-        touch: true,
+        touch: true
     });
 });
 
 $(document).ready(function(){
-    $(".accordion").accordion({
-        defaultopen: ''
+    $('.accordion').accordion({
+        defaultOpen: ''
     });
 });
 
 $(function(){
-    let filterlist = {
+    let filterList = {
         init: function(){
             $('.workportfolio').mixitup({
-                targetSelector: '.portfolio',
-                filterSelector: '.filter',
-                effects: ['fade'],
-                easing: 'snap'
+                targetSelector: ".portfolio",
+                filterSelector: ".filter",
+                effects: ["fade"],
+                easing: "snap"
             });
         },
     };
-    filterlist.init();
+    filterList.init();
 });
+
 
 $(document).ready(function($){
     $('.primary-nav-trigger').on('click', function(){
         $('.menu-icon').toggleClass('is-clicked');
         $('.primary-nav').toggleClass('is-visible');
         $('.body').toggleClass('overflow-hidden');
-    })
+    });
 });
 
 $('.primary-nav').on("click", "a", function(event){
     event.preventDefault();
     let id = $(this).attr('href'),
         top = $(id).offset().top;
-    $('body, html').animate({scroll: top}, 1000);
+    $('body, html').animate({scrollTop: top}, 1000);
 });
 
-let headerHeight = $(".topheader").height();
+let headerHeight = $('.topheader').height();
 $(window).on('scroll', { previousTop: 0 },
-function(){
-    let currentTop = $(window).scrollTop();
-    if(currentTop < this.previousTop){
-        if( !(currentTop > 0) && $(".topheader").hasClass("is-fixed")){
-            $(".topheader").removeClass("is-fixed");
+    function(){
+        let currentTop = $(window).scrollTop();
+        if(currentTop < this.previousTop){
+            if( !(currentTop > 0) && $('.topheader').hasClass('is-fixed')){
+                $('.topheader').removeClass('is-fixed');
+            }
+        }else{
+            if(currentTop > headerHeight && !$('.topheader').hasClass('is-fixed')){
+                $('.topheader').addClass('is-fixed');
+            }
         }
-    }else{
-        if(currentTop > headerHeight && !$(".topheader").hasClass("is-fixed")){
-            $(".topheader").addClass("is-fixed");
-        }
+        this.previousTop = currentTop;  
     }
-    this.previousTop = currentTop;
-});
+);
