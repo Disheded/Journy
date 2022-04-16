@@ -1,17 +1,17 @@
 $(document).ready(function(){
-    $('.bxslider').bxSlider({
+    $(".bxslider").bxSlider({
         pager: false,
     });
 });
 
 $(document).ready(function(){
-    $('.bxslider_team').bxSlider({
-        controls: false,
+    $(".bxslider_team").bxSlider({
+        controls: false
     });
 });
 
 $(document).ready(function(){
-    $('.flexslider').flexslider({
+    $(".flexslider").flexslider({
         animation: "slide",
         animationLoop: false,
         itemWidth: 200,
@@ -20,26 +20,27 @@ $(document).ready(function(){
     });
 });
 
+
 $(document).ready(function(){
-    $('.accordion').accordion({
-        defaultOpen: ''
+    $(".accordion").accordion({
+        defaultopen: ''
     });
 });
+
 
 $(function(){
     let filterList = {
         init: function(){
             $('.workportfolio').mixitup({
-                targetSelector: ".portfolio",
-                filterSelector: ".filter",
-                effects: ["fade"],
-                easing: "snap"
+                targetSelector: '.portfolio',
+                filterSelector: '.filter',
+                effects: ['fade'],
+                easing: 'snap'
             });
         },
     };
     filterList.init();
 });
-
 
 $(document).ready(function($){
     $('.primary-nav-trigger').on('click', function(){
@@ -61,10 +62,12 @@ $(window).on('scroll', { previousTop: 0 },
     function(){
         let currentTop = $(window).scrollTop();
         if(currentTop < this.previousTop){
+            console.log("<");
             if( !(currentTop > 0) && $('.topheader').hasClass('is-fixed')){
                 $('.topheader').removeClass('is-fixed');
             }
         }else{
+            console.log(">");
             if(currentTop > headerHeight && !$('.topheader').hasClass('is-fixed')){
                 $('.topheader').addClass('is-fixed');
             }
@@ -72,6 +75,7 @@ $(window).on('scroll', { previousTop: 0 },
         this.previousTop = currentTop;  
     }
 );
+
 
 $('#send_form .submit').on("click", function(event){
     if ($('#name').val() != '' && $('#email').val() != ''){
@@ -82,6 +86,7 @@ $('#send_form .submit').on("click", function(event){
             },
             body: $("#send_form").serialize()
         }).then((response) => response.json()).then((data) =>{
+            console.log(data)
             if(data.status === "ok"){
                 $("#send_form").addClass("send_success");
                 setTimeout(() => $("#send_form").removeClass("send_success"), 4000);
