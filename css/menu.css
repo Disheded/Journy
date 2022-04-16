@@ -89,3 +89,19 @@
 .primary-nav a:hover{
     background-color: #e36767;
 }
+
+.send_success{
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(1, 255, 1, 0.3);
+    border: 2px solid rgba(1, 255, 1, 0.3);
+}
+
+.send_fail{
+    padding: 2%;
+    box-shadow: 0 0 10px rgba(255, 1, 1, 0.3);
+    border: 2px solid rgba(255, 1, 1, 0.3);
+}
+
+#send_form{
+    transition: all 1s ease-out;
+}

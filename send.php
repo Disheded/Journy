@@ -5,16 +5,16 @@
     $name = trim(urldecode(htmlspecialchars($name)));
     $email = trim(urldecode(htmlspecialchars($email)));
     $msg = trim(urldecode(htmlspecialchars($msg)));
-    if(mail("hgfgvvg.ru@gmail.com", "Новый запрос"б
-    "<h1>На вашем сайте была оставленна заявка</h1>
-    <br>от: <b>".$name"</b>
-    <br>e-mail: <b>".$email"
-    <br>пользователь оставил комментарий: ".$msg"
-    <br>e-mail: Поздравляем с новой заявкой!",
-    ""
-    "))
-    
-    htmlspecialchars($email);
-    urldecode($email);
-    trim($email);
+    $html_text = "<h1>На вашем сайте была составлена заявка</h1>
+                    <br>от: <b>".$name."</b>
+                    <br>e-mail: <b>".$email."</b>
+                    <br>пользователь оставил комментарий ".$msg."
+                    <br>Поздравляю с новой заявкой!";
+    $my_email = "hgfgvvg.ru@gmail.com";
+    if(mail($my_email, "Новый запрос на создание сайта", $html_text,
+          "From: cccr-early.ru\r\n". "Content-type: text/html\r\n")){
+        echo '{"status": "ok"}';
+    }else{
+        echo '{"status": "error"}';
+    }
 ?>
