@@ -100,3 +100,26 @@ $('#send_form .submit').on("click", function(event){
         alert("Заполните обязательные поля");
     }
 });
+
+$(window).load(function(){
+    $(".preload").fadeOut("slow");
+function onScrollInit(items){
+    items.each(function(){
+        let osElement = $(this);
+        osAnimationClass = osElement.attr('data-os-animation'),
+        osAnimationDelay = osElement.attr('data-os-animation-delay');
+    osElement.css({
+        'animation-delay': osAnimationDelay
+    });
+    osElement.waypoint(function(){
+        osElement.addClass('animated').addClass(osAnimationClass);
+    },
+    {
+        triggerOnce:true,
+        offset:'90%'
+    });
+    });
+
+}
+onScrollInit( $('.os-animation'));
+});

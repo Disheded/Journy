@@ -6,7 +6,7 @@
 }
 
 .topheader{
-    z-index: 9998;
+    z-index: 4000;
     position: fixed;
     width: 100%;
     background: white;
@@ -475,7 +475,7 @@ footer h4{
     top: 0;
     height: 100%;
     width: 100%;
-    z-index: 9999;
+    z-index: 5000;
     background-color: #000
 }
 
@@ -496,4 +496,90 @@ footer h4{
     animation-name: spinningSquares;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
+}
+
+#spinSqauar_1{
+    left: 0px;
+    animation-delay: 0.6s;
+}
+
+#spinSqauar_2{
+    left: 28px;
+    animation-delay: 0.75s;
+}
+
+#spinSqauar_3{
+    left: 56px;
+    animation-delay: 0.9s;
+}
+
+#spinSqauar_4{
+    left: 84px;
+    animation-delay: 1.05s;
+}
+
+#spinSqauar_5{
+    left: 112px;
+    animation-delay: 1.2s;
+}
+
+#spinSqauar_6{
+    left: 140px;
+    animation-delay: 1.35s;
+}
+
+#spinSqauar_7{
+    left: 168px;
+    animation-delay: 1.5s;
+}
+
+#spinSqauar_8{
+    left: 196px;
+    animation-delay: 1.65s;
+}
+
+@keyframes spinningSquares {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.3) rotate(90deg);
+    }
+}
+
+@media only screen and (max-width:768){
+    .bx-wrapper .bx-controls-direction a{
+        display: none;
+    }
+
+    .numeral div{
+        margin: 3% 0;
+    }
+
+    .innerwidth{
+        width: 100%;
+    }
+
+    .team .bx-wrapper .bx-pager{
+        bottom: 30px;
+    }
+
+    .sinner2{
+        min-height: 300px;
+    }
+
+    .sinner1{
+        min-height: 300px;
+    }
+    .sinner1 img{
+        width: 70%;
+    }
+
+    .price-content{
+        width: 100%;
+    }
+
+    .aboutus div{
+        margin-top: 20px;
+    }
 }
